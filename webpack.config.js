@@ -13,12 +13,6 @@ module.exports = {
     filename: "js/bundle.js"
   },
 
-  devServer: {
-    contentBase: path.join(__dirname, "dist"),
-    compress: true,
-    port: 9000
-  },
-
   module: {
     rules: [
       {
@@ -76,6 +70,12 @@ module.exports = {
         ]
       }
     ]
+  },
+
+  devServer: {
+    contentBase: path.join(__dirname),
+    compress: true,
+    port: 9000
   },
 
   plugins: [
