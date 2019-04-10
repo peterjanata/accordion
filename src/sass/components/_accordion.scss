@@ -1,0 +1,50 @@
+.accordion {
+  margin: 100px auto;
+  max-width: 800px;
+
+  .accordion-head {
+    cursor: pointer;
+    position: relative;
+
+    &::before,
+    &::after {
+      content: "";
+      width: 15px;
+      height: 2px;
+      position: absolute;
+      top: 50%;
+      transform: translate(0, -50%);
+      background-color: $color-headings;
+      transition: all $transition-duration ease-in-out;
+    }
+
+    &::before {
+      right: 10px;
+
+      transform: rotate(45deg);
+    }
+
+    &::after {
+      right: 0;
+      transform: rotate(-45deg);
+    }
+
+    &.active {
+      &::before {
+        transform: rotate(-45deg);
+      }
+
+      &::after {
+        transform: rotate(45deg);
+      }
+    }
+  }
+
+  .accordion-content {
+    display: none;
+
+    &.active {
+      display: block;
+    }
+  }
+}
