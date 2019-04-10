@@ -1,0 +1,26 @@
+body {
+  margin: 0;
+  padding: 0;
+}
+
+h1,
+h2,
+h3,
+h4 {
+  margin: 10px auto;
+
+  @media (min-width: $breakpoint-sm-min) {
+    margin: 20px auto;
+  }
+}
+
+.container {
+  padding-left: 15px;
+  padding-right: 15px;
+
+  @media (min-width: $breakpoint-sm-min) {
+    margin: auto;
+    max-width: 1200px;
+    padding: 0;
+  }
+}
