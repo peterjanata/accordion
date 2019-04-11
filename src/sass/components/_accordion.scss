@@ -1,5 +1,5 @@
 .accordion {
-  margin: 100px auto;
+  margin: 50px auto;
   max-width: 800px;
 
   &-head {
@@ -40,6 +40,7 @@
   }
 
   &-content {
+    padding-right: 30px;
     max-height: 0;
     overflow: hidden;
     transition: all $transition-duration ease-in-out;
@@ -47,5 +48,9 @@
     &.active {
       max-height: 100vh;
     }
+  }
+
+  @media (min-width: $breakpoint-sm-min) {
+    margin: 100px auto;
   }
 }
